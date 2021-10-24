@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		#div_tong{
+			width: 100%;
+			height: 700px;
+			background: pink;
+		}
+		/*div_tren*/
+		#div_tren{
+			width: 100%;
+			height: 30%;
+			background: red;
+		}
+			#div_tren > .trai{
+			width: 50%;
+			height: 100%;
+			background: yellow;
+			float: left;
+			}
+			#div_tren > .phai{
+				width: 50%;
+				height: 100%;
+				background: black;
+				float: left;
+			}
+				#div_tren > .phai > .tren{
+					width: 100%;
+					height: 70%;
+					background: brown;
+				}
+				#div_tren > .phai > .duoi{
+					width: 100%;
+					height: 30%;
+					background: purple;
+		}
+		/*div_duoi*/
+		#div_duoi{
+			width: 100%;
+			height: 70%;
+			background: blue;
+		}
+				#div_duoi > .trai{
+					width: 30%;
+					height: 100%;
+					background: gray;
+					float: left;
+					border-right: 4px solid green;
+				}
+					#div_duoi > .trai > .tren{
+						width: 100%;
+						height: 50%;
+						background: blueviolet;
+					}
+					#div_duoi > .trai > .duoi{
+						width: 100%;
+						height: 50%;
+						background: skyblue;
+					}
+				#div_duoi > .giua{
+					width: 40%;
+					height: 100%;
+					background: green;
+					
+					float: left;
+				}
+					#div_duoi > .giua > .trai{
+						width: 20%;
+						height: 100%;
+						background: darkblue;
+						float: left;
+					}
+					#div_duoi > .giua > .phai{
+						width: 80%;
+						height: 100%;
+						background: lightblue;
+						float: left;
+					}
+				#div_duoi > .phai{
+					width: 29%;
+					height: 100%;
+					background: greenyellow;
+					float: right;
+					border-left-color: 3px green;
+				}
+					#div_duoi > .phai > .tren{
+						width: 100%;
+						height: 30%;
+						background: orange;
+					}
+					#div_duoi > .phai > .duoi{
+						width: 100%;
+						height: 70%;
+						background: darkorange;
+					}
+	</style>
+</head>
+<body>
+	<div id="div_tong">
+		<div id="div_tren">
+			<div class="trai"></div>
+			<div class="phai">
+				<div class="tren"></div>
+				<div class="duoi"></div>
+			</div>
+		</div>
+
+		<div id="div_duoi">
+			<div class="trai">
+				<div class="tren"></div>
+				<div class="duoi"></div>
+			</div>
+			<div class="giua">
+				<div class="trai"></div>
+				<div class="phai"></div>
+			</div>
+			<div class="phai">
+				<div class="tren"></div>
+				<div class="duoi"></div>
+			</div>
+		</div>	
+
+	</div>
+</body>
+</html>
