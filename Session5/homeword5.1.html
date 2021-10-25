@@ -7,119 +7,222 @@
 		#div_tong{
 			width: 100%;
 			height: 700px;
-			background: pink;
+			/*background: pink;*/
 		}
 		/*div_tren*/
 		#div_tren{
 			width: 100%;
-			height: 30%;
-			background: red;
+			height: 20%;
+		/*	background: red;*/
 		}
 			#div_tren > .trai{
 			width: 50%;
 			height: 100%;
-			background: yellow;
+			/*background: yellow;*/
 			float: left;
 			}
 			#div_tren > .phai{
 				width: 50%;
 				height: 100%;
-				background: black;
+				/*background: black;*/
 				float: left;
 			}
 				#div_tren > .phai > .tren{
 					width: 100%;
-					height: 70%;
-					background: brown;
+					height: 87%;
+				/*	background: brown;*/
 				}
 				#div_tren > .phai > .duoi{
 					width: 100%;
-					height: 30%;
-					background: purple;
-		}
+					height: 23%;
+					/*background: purple;*/
+				}
+				.read_more:before {
+					content: \007c;
+					margin-right: 6px;
+					color: black;
+				}
 		/*div_duoi*/
 		#div_duoi{
 			width: 100%;
-			height: 70%;
-			background: blue;
+			height: 80%;
+			/*background: blue;*/
 		}
 				#div_duoi > .trai{
-					width: 30%;
+					width: 25%;
 					height: 100%;
-					background: gray;
-					float: left;
+/*					background: gray;
+*/					float: left;
 					border-right: 4px solid green;
 				}
 					#div_duoi > .trai > .tren{
 						width: 100%;
 						height: 50%;
-						background: blueviolet;
-					}
+/*						background: blueviolet;
+*/					}
 					#div_duoi > .trai > .duoi{
 						width: 100%;
 						height: 50%;
-						background: skyblue;
-					}
+/*						background: skyblue;
+*/					}
 				#div_duoi > .giua{
-					width: 40%;
+					width: 55%;
 					height: 100%;
-					background: green;
+				/*	background: green;*/
 					
 					float: left;
 				}
 					#div_duoi > .giua > .trai{
-						width: 20%;
+						width: 10%;
 						height: 100%;
-						background: darkblue;
+						/*background: darkblue;*/
 						float: left;
 					}
 					#div_duoi > .giua > .phai{
-						width: 80%;
+						width: 90%;
 						height: 100%;
-						background: lightblue;
+						/*background: lightblue;*/
 						float: left;
 					}
+					#div_duoi > .giua > .phai > .tren{
+						width: 100%;
+						height: 45%;
+						/*background: blue;*/
+					}
+					#div_duoi > .giua > .phai > .tren > .trai{
+						width: 60%;
+						height: 100%;
+						/*background: black;*/
+						float: left;
+					}
+					#div_duoi > .giua > .phai > .tren > .phai{
+						width: 40%;
+						height: 100%;
+						/*background: pink;*/
+						float: left;
+					}
+					#div_duoi > .giua > .phai > .duoi{
+						width: 100%;
+						height: 55%;
+/*						background: red;
+*/					}
 				#div_duoi > .phai{
-					width: 29%;
+					width: 19.5%;
 					height: 100%;
-					background: greenyellow;
-					float: right;
-					border-left-color: 3px green;
+/*					background: greenyellow;
+*/					float: left;
+					border-left-color: 3px solid green;
 				}
 					#div_duoi > .phai > .tren{
 						width: 100%;
 						height: 30%;
-						background: orange;
-					}
+/*						background: orange;
+*/					}
 					#div_duoi > .phai > .duoi{
 						width: 100%;
 						height: 70%;
-						background: darkorange;
-					}
+/*						background: darkorange;
+*/					}
 	</style>
 </head>
 <body>
 	<div id="div_tong">
 		<div id="div_tren">
-			<div class="trai"></div>
+			<div class="trai">
+				<img src="https://github.com/tridinhhoa/learn-code/blob/main/Session5/Bai%204.2%20-%20Hoa%20Canh/images/logo.gif?raw=true" style="height: 145px;">
+			</div>
 			<div class="phai">
-				<div class="tren"></div>
-				<div class="duoi"></div>
+				<div class="tren" align="right">
+					<select>
+						<option>Hội hoa Lan & Cây cảnh TPHCM</option>
+					</select>
+					<button type="submit">Go</button>
+				</div>
+				<div class="duoi" align="right">
+					<img src="https://github.com/tridinhhoa/learn-code/blob/main/Session5/Bai%204.2%20-%20Hoa%20Canh/images/n_hoavacc.gif?raw=true">
+					<span class="read_more"></span>
+ 					<img src="https://github.com/tridinhhoa/learn-code/blob/main/Session5/Bai%204.2%20-%20Hoa%20Canh/images/n_ttuc.gif?raw=true">
+					<img src="https://github.com/tridinhhoa/learn-code/blob/main/Session5/Bai%204.2%20-%20Hoa%20Canh/images/n_hopthu.gif?raw=true">
+					<img src="https://github.com/tridinhhoa/learn-code/blob/main/Session5/Bai%204.2%20-%20Hoa%20Canh/images/n_hvien.gif?raw=true">
+				</div>
 			</div>
 		</div>
 
 		<div id="div_duoi">
 			<div class="trai">
-				<div class="tren"></div>
-				<div class="duoi"></div>
+				<div class="tren">
+					<img src="https://github.com/tridinhhoa/learn-code/blob/main/Session5/Bai%204.2%20-%20Hoa%20Canh/images/tintuc_bientrai.gif?raw=true">
+				</div>
+				<div class="duoi">
+					<img src="https://github.com/tridinhhoa/learn-code/blob/main/Session5/Bai%204.2%20-%20Hoa%20Canh/images/Hoavang.gif?raw=true">
+				</div>
 			</div>
 			<div class="giua">
-				<div class="trai"></div>
-				<div class="phai"></div>
+				<div class="trai">
+					<img src="https://github.com/tridinhhoa/learn-code/blob/main/Session5/Bai%204.2%20-%20Hoa%20Canh/images/mau.jpg?raw=true">
+					<img src="https://github.com/tridinhhoa/learn-code/blob/main/Session5/Bai%204.2%20-%20Hoa%20Canh/images/buom1.gif?raw=true">
+				</div>
+				<div class="phai">
+					<div class="tren">
+						<div class="trai">
+							<span>
+								<h1>Muôn hoa đua sắc</h1>
+								<br>
+								<br>
+								<span">
+									<font size="2.5px">
+									<em>
+									Đã là hoa thì hoa nào cũng đẹp. Kể từ những đoá hoa dân dã giản dị bình thường. Hoa sim, hoa mua tím biếc sườn đồi. Hoa cà tím biếc vườn quê. Hoa lục bình tím biếc trên dòng sông. Hoa súng tím biếc ao làng. Hoa xoan tím biếc những chiều xóm vắng…. Hoa gạo đỏ đầu làng, hoa phượng đỏ trời góc phố. Hoa mào gà, hoa dong riềng đỏ góc vườn ai. Hoa cau, hoa dừa trắng phau lưng trời. Những loài hoa dân giả muôn màu muôn sắc cũng đẹp huống chi là các loài hoa quý phái.
+									</em>
+									</font>
+								</span>
+							</span>	
+						</div>
+						<div class="phai" >
+							<img src="https://github.com/tridinhhoa/learn-code/blob/main/Session5/Bai%204.2%20-%20Hoa%20Canh/images/buom4.gif?raw=true" align="center">
+					 	</div>
+					</div>
+					<div class="duoi">
+						<span>
+							<font size="2.5px">
+								<em>
+									<p>
+									Một trong những loài hoa quý phái là hoa lan. "Vua thưởng lan, quan thưởng trà". Cái hương lan - " cái hương thuỷ quái gì mà mê đắm lòng người đến thế". Phong lan thơm sực nức, nồng nàn, gần gũi. Địa lan thanh cao, nhẹ nhõm, lúc thắm thiết, sực nức, lúc nhạt nhoà xa xăm. Đoá bạch ngọc khi nở có màu sáng như chiếc hài của thần vệ nữ tự ngày xưa.
+									</p>
+									<p>
+									Hoa mai có nhiều loài. Từ ngũ đài hoa - năm cánh vàng rực rỡ đến hoàng tỉ trên 30 cánh. Hoa mai đẹp từ gốc đến cành, sống lâu bền, xếp vào hàng cổ thụ "lão mai độc thọ nhất chi vinh" (thơ cổ). Hoa mai không phô sắc hương mà khiêm tốn dịu dàng, tượng trưng cho cốt cách của người quân tử, chịu được cái giá rét của mùa đông để nở vào một sớm xuân hồng.
+									</p>
+									<p>
+									Hoa cúc vàng trong hàng tứ quý " tùng, cúc, trúc, mai" tượng trưng cho mặt trời, cho quyền lực. Cúc đại đoá bông to, cành cong lộng lẫy sang trọng, cúc vạn thọ giản dị, bền lâu. Hoa cúc là loại "diệp bất li chi, hoa vô lạc địa", lá cúc không bao giờ rời khỏi cành dẫu đã héo khô, hoa tàn cánh không rụng như người quân tử không xa rời lý tưởng. 
+									</p>
+									<p>
+									Loài hao mang biểu tượng của mùa xuân là hoa đào. Những cánh hoa đào rưng rưng khoe sắc, màu hồng phơn phớt hay hồng đậm xen trong lá non như vẻ e ấp ngại ngùng như người thiếu nữ. Hoa đào như muôn cánh bướm hồng rung rinh trong gió, khoe sắc trong nắng xuân.
+									</p>
+								</em>
+							</font>
+						
+						</span>
+					</div>
+				</div>
 			</div>
 			<div class="phai">
-				<div class="tren"></div>
-				<div class="duoi"></div>
+				<div class="tren" align="center">
+					<img src="https://github.com/tridinhhoa/learn-code/blob/main/Session5/Bai%204.2%20-%20Hoa%20Canh/images/thamgia.gif?raw=true" style="width: 100%;">
+					<form style="width: 100%;">
+						Họ tên
+						<input type="name" name="name">
+						<br>
+						Mã số
+						<input type="password" name="pass">
+					</form>
+					<caption align="center"><img src="https://github.com/tridinhhoa/learn-code/blob/main/Session5/Bai%204.2%20-%20Hoa%20Canh/images/ok.gif?raw=true">
+					</caption> 
+					<img src="https://github.com/tridinhhoa/learn-code/blob/main/Session5/Bai%204.2%20-%20Hoa%20Canh/images/quen.gif?raw=true"style="width: 100%;">
+				</div>
+				<div class="duoi" align="center">
+					<img src="https://github.com/tridinhhoa/learn-code/blob/main/Session5/Bai%204.2%20-%20Hoa%20Canh/images/h2.jpg?raw=true" style="width: 80px;">
+				</div>
+
 			</div>
 		</div>	
 
