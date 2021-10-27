@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>	</title>
+	<style type="text/css">
+		#div_tong{
+			width: 	100%;
+			height: 700px;
+			background: green;
+		}
+		#div_sanho{
+			width: 25%;
+			height: 100%;
+			float: left;
+			background: black;
+		}
+		#div_kesoc{
+			width: 10%;
+			height: 100%;
+			background-image: url(https://github.com/tridinhhoa/learn-code/blob/main/Session6/Bai%205.2%20-%20My%20Thuat/IMAGES/soc.jpg?raw=true);
+			/*background-repeat: no-repeat;*/
+			float: left;
+		}
+		#div_suatrang{
+			width: 65%;
+			height: 100%;
+			background-image: url(https://github.com/tridinhhoa/learn-code/blob/main/Session6/Bai%205.2%20-%20My%20Thuat/IMAGES/sua1.gif?raw=true);
+			float: left;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		#div_suatrang > .hinh_anh{
+			width: 22%;
+			height: 100;
+		}
+	</style>
+
+</head>
+<body>
+		<div id=div_tong style="position: relative;">
+			<div id="div_sanho">
+				<img src="https://github.com/tridinhhoa/learn-code/blob/main/Session6/Bai%205.2%20-%20My%20Thuat/IMAGES/sanho.gif?raw=true" style="position: absolute; bottom: 20px; width: 30%; height: 90%;">
+			</div>	
+			<div id="div_kesoc"></div>
+			<div id="div_suatrang" style="position: relative;">
+				<h1 style="color: orangered ;"> THAM GIA CÂU CLB</h1>
+				<p> Quý độc giả hãy điền đầy đủ thông tin để tham gia phát triển Câu lạc bộ <br>ngày càng vững mạnh hơn.</p>
+				<div class="bang" style="position:absolute; left: 50px; bottom: 0px">
+					<table bgcolor="greenyellow" style="margin: 5px;">
+						<tr>
+							<td align="right">
+								Họ và tên:
+							</td>
+							<td text-align="center">
+								<input type="name" name="name">*
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								Địa chỉ:
+							</td>
+							<td text-align="center">
+								<input type="text" name="place">
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								Email:
+							</td>
+							<td text-align="center">
+								<input type="Email" name="Email">*
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								Điện thoại:
+							</td>
+							<td text-align="center">
+								<input type="number" name="phone">*
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								Ngày sinh:
+							</td>
+							<td text-align="center">
+								<input type="text" size="2"> /
+								<input type="text" size="2"> /
+								<input type="text" size="3">*
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								Đề tài:
+							</td>
+							<td>
+								<select>
+									<option>
+										Tìm hiểu Sứa biển
+									</option>
+									<option>
+										Tìm hiểu San hô
+									</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td text-align="center" align="right">
+								Nhóm:
+							</td>
+							<td>
+								<input type="radio" name="group"> Nghiên cứu <br>
+								<input type="radio" name="group"> Hải ngư <br>
+								<input type="radio" name="group"> Viễn dương <br>
+								<input type="radio" name="group"> Mỹ thuật <br>
+								<input type="radio" name="group"> Thực phẩm <br>
+								<input type="radio" name="group"> Sinh viên <br>
+							</td>
+						</tr>
+						<tr>
+							<td text_align="center" align="right">
+								Gửi hình
+							</td>
+							<td>
+								<input type="file" name="file"> 
+								<button type="submit"> Browse</button>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								Tài liệu:
+							</td>
+							<td>
+								<input type="checkbox" name="document">Sinh vật Biển <br>
+								<input type="checkbox" name="document">Các loại Sứa biển <br>
+								<input type="checkbox" name="document">San hô <br>
+								<input type="checkbox" name="document">Môi trường biển <br>
+								<input type="checkbox" name="document">Khi hậu 
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<button> Tham gia</button>
+								<button type="reset">Xoá thông tin</button>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="hinh_anh" style="position:absolute; right: 0px; top: 30px;">
+					<img src="https://github.com/tridinhhoa/learn-code/blob/52cc3d0518a3f01070a4141b49733fb2ca938a67/Session6/Bai%205.2%20-%20My%20Thuat/IMAGES/nhom1a.jpg?raw=true">
+					<img src="https://github.com/tridinhhoa/learn-code/blob/52cc3d0518a3f01070a4141b49733fb2ca938a67/Session6/Bai%205.2%20-%20My%20Thuat/IMAGES/nhom1b.jpg?raw=true">
+					<img src="https://github.com/tridinhhoa/learn-code/blob/52cc3d0518a3f01070a4141b49733fb2ca938a67/Session6/Bai%205.2%20-%20My%20Thuat/IMAGES/nhom1c.jpg?raw=true">
+					<img src="https://github.com/tridinhhoa/learn-code/blob/52cc3d0518a3f01070a4141b49733fb2ca938a67/Session6/Bai%205.2%20-%20My%20Thuat/IMAGES/nhom1d.jpg?raw=true">
+					
+				</div>
+			</div>
+		</div>
+</body>
+</html>
