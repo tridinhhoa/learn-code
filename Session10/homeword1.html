@@ -1,0 +1,40 @@
+<!-- Bài 1: Tạo 1 input. Yêu cầu:
+
+- Lấy giá trị input về cho vào mảng
+
+- In ra toàn bộ số chẵn, số lẻ
+
+- Tính tổng phần tử trong mảng
+
+*Tìm số lớn nhất trong mảng
+
+**In ra các số nguyên tố
+
+***In số với màu ứng với mã màu trong css. (VD: nhập 10 sẽ có mã màu là #000010) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bài tập array 1</title>
+</head>
+<body>
+	<form>
+		<input type="number" id="input_so" placeholder="Hãy nhập số vào đây">
+		<button type="button" id="nhap_vao" onclick="nhap()">Nhấn nhập</button>
+		<button type="button" id="tinh_toan" onclick="in_ra()">Tính toán</button>
+	</form>
+	<div id="phan_tu"></div>
+	<div id="ket_qua"></div>
+<script type="text/javascript">
+	let mang = [];
+	function nhap() {
+		let so = parseFloat(document.getElementById('input_so').value);
+		mang.push(so);
+		document.getElementById('phan_tu').innerHTML = 'Số phần tử bạn đã nhập: ' + mang.length;
+	}
+		
+</script>
+</body>
+</html>
