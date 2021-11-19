@@ -1,17 +1,3 @@
-<!-- Bài 1: Tạo 1 input. Yêu cầu:
-
-- Lấy giá trị input về cho vào mảng
-
-- In ra toàn bộ số chẵn, số lẻ
-
-- Tính tổng phần tử trong mảng
-
-*Tìm số lớn nhất trong mảng
-
-**In ra các số nguyên tố
-
-***In số với màu ứng với mã màu trong css. (VD: nhập 10 sẽ có mã màu là #000010) -->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,21 +6,108 @@
 	<title>Bài tập array 1</title>
 </head>
 <body>
-	<form>
+	
+	<form onsubmit='return false'> 
 		<input type="number" id="input_so" placeholder="Hãy nhập số vào đây">
 		<button type="button" id="nhap_vao" onclick="nhap()">Nhấn nhập</button>
 		<button type="button" id="tinh_toan" onclick="in_ra()">Tính toán</button>
 	</form>
 	<div id="phan_tu"></div>
-	<div id="ket_qua"></div>
+<!-- Câu lệnh nhấn enter để nhập số, nhớ chèn vào <form onsubmit='return false'> -->
+<script>
+	var input = document.getElementById('input_so');
+	input.addEventListener("keyup", function(enter){
+		if (enter.keyCode === 13){
+			enter.preventDefault();
+			document.getElementById('nhap_vao').click();
+		}
+	})
+</script>
+<!-- Trường hợp này thì chổ input thêm câu lệnh:  onkeypress="return searchKeyPress(event);
+<script>
+	function searchKeyPress(e){
+    	e = e || window.event;
+		if (e.keyCode === 13){
+        	document.getElementById('nhap_vao').click();
+        	return false;
+    	}
+    	return true;
+	}
+</script> -->
 <script type="text/javascript">
 	let mang = [];
+	// - Lấy giá trị input về cho vào mảng
 	function nhap() {
-		let so = parseFloat(document.getElementById('input_so').value);
+		let so = parseInt(document.getElementById('input_so').value);
 		mang.push(so);
 		document.getElementById('phan_tu').innerHTML = 'Số phần tử bạn đã nhập: ' + mang.length;
+		document.getElementById('input_so').value = '';
 	}
-		
+	let in_ket_qua = document.getElementById('ket_qua');
+	let chuoi = '';
+	function danh_sach() {
+		for (let i = 0; i < mang.length; i++) {
+			chuoi += mang[i] + ', '
+			}
+		in_ket_qua.innerHTML = 'Danh sách của mảng: ' + chuoi;
+		}
+	let so_chan = '';
+	let so_le = '';
+	// in ra số chẵn lẻ
+	function chan_le(){
+		for (let i = 0; i < mang.length; i++){
+			if (mang[i] % 2 == 0){
+				so_chan += mang[i] + ', ';
+			} else {
+				so_le += mang[i] + ', ';
+			}
+		in_ket_qua.innerHTML = 'Các số chẵn trong mảng: ' + so_chan;
+		in_ket_qua.innerHTML = 'Các số lẻ trong mảng: ' + so_le;
+		}
+	}	
+	// - Tính tổng phần tử trong mảng
+	function tinh_tong(){
+		let tong = 0;
+		for (let i = 0; i < mang.length; i++){
+			tong += mang[i];
+		}
+		in_ket_qua.innerHTML = 'Tổng của mảng:' + tong;
+	}
+	// *Tìm số lớn nhất trong mảng
+	function so_lon_nhat(){
+		let so_lon_nhat = mang[0];
+		for (let i = 1; i < mang.length; i++){
+			if (so_lon_nhat < mang[i]){
+				so_lon_nhat = mang[i];
+			}
+		}
+		in_ket_qua.innerHTML = 'Số lớn nhất của mảng' + so_lon_nhat;
+	}
+	// **In ra các số nguyên tố
+	function so_nguyen_to(){
+		let nguyen_to = '';
+		for (let i = 0, i < mang.length; i++){
+			let dem_phep_chia = 0;
+			for (let j = 1, j <= mang[i]; j++){
+				if (mang[i] % j = 0){
+					dem_phep_chia++;
+				}
+			}
+			if (dem_phep_chia = 2){
+				nguyen_to += mang[i] + ', ';
+			}
+		}
+		in_ket_qua.innerHTML = 'Các số nguyên tố là: ' + nguyen_to;
+	}
+// ***In số với màu ứng với mã màu trong css. (VD: nhập 10 sẽ có mã màu là #000010)
+	function in_ra() {
+		nhap(); 
+		danh_sach();
+		chan_le();
+		tinh_tong();
+		so_lon_nhat();
+		so_nguyen_to();
+	}
 </script>
 </body>
 </html>
