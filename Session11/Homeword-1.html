@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<p> From đăng kí</p>
+	<form>
+		Họ và tên:
+		<input type="name" id="ho_ten">
+		<span id="loi_ho_ten"></span>
+		<br>
+		Giới tính:
+		<input type="radio" name="gioi_tinh">Nam
+		<input type="radio" name="gioi_tinh">Nữ
+		<input type="radio" name="gioi_tinh">Khác
+		<span id="loi_gioi_tinh"></span>
+		<br>
+		Địa chỉ:
+		<input type="text" id="dia_chi">
+		<br>
+		Email:
+		<input type="email" id="email">
+		<br>
+		Mật khẩu:
+		<input type="password" id="mat_khau">
+		<br>
+		Nhập lại mật khẩu:
+		<input type="password" id="re_mat_khau">
+		<br>
+		Sở thích:
+		<select>
+			<option>
+				Đá bóng
+			</option>
+			<option>
+				Xem phim
+			</option>
+			<option>
+				Đọc sách
+			</option>
+		</select>
+		<br>
+		<button type="button" id="dang_ki" onclick="return nhap_vao()">Đăng kí</button>
+		<button type="reset">Nhập lại</button>
+	</form>
+	<script type="text/javascript">
+		function nhap_vao() 
+		{
+			let kiem_tra_loi = false;
+			// Kiểm tra tên
+			let ten = document.getElementById('ho_ten').value;
+			if (ten.length === 0){
+				document.getElementById('loi_ho_ten').innerHTML = "Tên không được để trống và viết hoa chữ cái đầu";
+				kiem_tra_loi = true;
+			} else{
+				let regex_ten = /^[AÀẢÃÁẠĂẰẲẴẮẶÂẦẨẪẤẬBCDĐEÈẺẼÉẸÊỀỂỄẾỆFGHIÌỈĨÍỊJKLMNOÒỎÕÓỌÔỒỔỖỐỘƠỜỞỠỚỢPQRSTUÙỦŨÚỤƯỪỬỮỨỰVWXYỲỶỸÝỴZ][aàảãáạăằẳẵắặâầẩẫấậbcdđeèẻẽéẹêềểễếệfghiìỉĩíịjklmnoòỏõóọôồổỗốộơờởỡớợpqrstuùủũúụưừửữứựvwxyỳỷỹýỵz]+ [AÀẢÃÁẠĂẰẲẴẮẶÂẦẨẪẤẬBCDĐEÈẺẼÉẸÊỀỂỄẾỆFGHIÌỈĨÍỊJKLMNOÒỎÕÓỌÔỒỔỖỐỘƠỜỞỠỚỢPQRSTUÙỦŨÚỤƯỪỬỮỨỰVWXYỲỶỸÝỴZ][aàảãáạăằẳẵắặâầẩẫấậbcdđeèẻẽéẹêềểễếệfghiìỉĩíịjklmnoòỏõóọôồổỗốộơờởỡớợpqrstuùủũúụưừửữứựvwxyỳỷỹýỵz]+(?: [AÀẢÃÁẠĂẰẲẴẮẶÂẦẨẪẤẬBCDĐEÈẺẼÉẸÊỀỂỄẾỆFGHIÌỈĨÍỊJKLMNOÒỎÕÓỌÔỒỔỖỐỘƠỜỞỠỚỢPQRSTUÙỦŨÚỤƯỪỬỮỨỰVWXYỲỶỸÝỴZ][aàảãáạăằẳẵắặâầẩẫấậbcdđeèẻẽéẹêềểễếệfghiìỉĩíịjklmnoòỏõóọôồổỗốộơờởỡớợpqrstuùủũúụưừửữứựvwxyỳỷỹýỵz]*)*$/;
+				if (!regex_ten.test(ten)){
+					document.getElementById('loi_ho_ten').innerHTML = "Tên phải viết theo ngữ pháp tiếng Việt";
+					kiem_tra_loi = true;
+				} else{
+					document.getElementById('loi_ho_ten').innerHTML = "";
+					kiem_tra_loi = true;
+				}
+			}
+			// Kiểm tra giới tính
+			let kiem_tra_gioi_tinh = false;
+			let arr_gioi_tinh = document.getElementsByName('gioi_tinh');
+			for (let i = 0; i < arr_gioi_tinh.length; i++) {
+				if(arr_gioi_tinh[i].checked) {
+					kiem_tra_gioi_tinh = true;
+				}
+			}
+			if (kiem_tra_gioi_tinh == false) {
+				document.getElementById('loi_gioi_tinh').innerHTML = "Bạn chưa tích vào giới tính";
+				kiem_tra_loi = true;
+			} else {
+				document.getElementById('loi_gioi_tinh').innerHTML = "";
+				kiem_tra_loi = true;
+			}
+			// Kiểm tra email
+			
+
+			if (kiem_tra_loi){
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>
